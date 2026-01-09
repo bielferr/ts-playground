@@ -1,0 +1,22 @@
+{
+  "name": "my-api",
+  "version": "1.0.0",
+  "description": "estudos back-end com typescript",
+  "license": "ISC",
+  "author": "shadow",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "rimraf": "^6.1.2"
+  }
+}
