@@ -37,12 +37,17 @@
     // "noPropertyAccessFromIndexSignature": true,
     "incremental": true,
     "baseUrl": "./",
+    "paths": {
+      "@roles/*": ["src/roles/*"],
+      "@shared/*": ["src/shared/*"],
+      "@users/*": ["src/users/*"]
+    },
 
 
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
