@@ -1,0 +1,24 @@
+import { Role } from '@roles/entities/roles'
+
+type createRoleDTO = {
+  name: string
+}
+export class RolesRepository {
+  private roles: Role[]
+
+  constructor() {
+    this.roles = []
+  }
+
+  create({ name }: createRoleDTO) {
+    const role = new Role()
+
+    Object.assign(role, {
+      name,
+      created_at: new Date(),
+    })
+
+    this.roles.push(role)
+    return role
+  }
+}
