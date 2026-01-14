@@ -11,5 +11,9 @@ rolesRoutes.post('/', (req, res) => {
   const role = rolesRepository.create({ name })
   return res.status(201).json(role)
 })
+rolesRoutes.get('/', (req, res) => {
+  const roles = rolesRepository.findAll()
+  return res.json(roles)
+})
 
 export { rolesRoutes }
