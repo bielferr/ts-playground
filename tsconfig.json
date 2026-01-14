@@ -53,7 +53,8 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "strictPropertyInitialization": false
   },
   "include": ["src"],
   "exclude": ["dist", "node_modules" ]
