@@ -1,0 +1,19 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "My API",
+        "version": "1.0.0",
+        "description": "API documentation for my application",
+        "contact": {
+            "name": "Gabriel Ferreira",
+            "email": "gabrielferreiradesouza5513@gmail.com"
+        }   
+    },
+    "servers": [
+        {
+            "url": "http://localhost:5555",
+            "description": "Local development server"
+        }
+    ]
+
+    }
