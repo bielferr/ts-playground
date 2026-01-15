@@ -14,6 +14,47 @@
             "url": "http://localhost:5555",
             "description": "Local development server"
         }
-    ]
-
+    ],
+    "paths": {
+        "/roles": {
+            "post":{
+                "tags": ["Roles"],
+                "summary": "Create a new role",
+                "description": "Endpoint to create a new role in the system.",
+                    "requestBody": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                  "type": "object",
+                                  "properties": {
+                                    "name": {
+                                      "type": "string",
+                                      "example": "admin"
+                                    }
+                                  }
+                                }
+                            }
+                        }
+                    },
+                    "responses": {
+                        "201": {
+                            "description": "Role created successfully"
+                        },
+                        "400": {
+                            "description": "Role already exists."
+                        }
+                    }
+                },
+                "get":{
+                    "tags": ["Roles"],
+                    "summary": "Get all roles",
+                    "description": "Return all roles paginated.",
+                    "responses":{
+                        "200":{
+                            "description": "success"
+                        }
+                    }
+                }
+            }
+        }
     }
