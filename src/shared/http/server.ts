@@ -2,7 +2,7 @@ import 'dotenv/config'
 import 'express-async-errors'
 import cors from 'cors'
 import routes from './routes/index'
-import { AppError } from '@shared/errors/appError'
+import { AppError } from '@shared/errors/AppError'
 import express, { NextFunction, Request, Response } from 'express'
 
 const app = express()
