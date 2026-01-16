@@ -1,6 +1,5 @@
 import { Role } from '@roles/entities/roles'
-import { DataSource } from '@shared/typeorm'
-import { cursorTo } from 'node:readline'
+import { AppDataSource } from '@shared/typeorm'
 import { Repository } from 'typeorm'
 
 type createRoleDTO = {
@@ -25,7 +24,7 @@ export class RolesRepository {
   private static INSTANCE: RolesRepository
 
   private constructor() {
-    this.repository = DataSource.getRepository(Role)
+    this.repository = AppDataSource.getRepository(Role)
   }
 
   public static getInstance(): RolesRepository {
