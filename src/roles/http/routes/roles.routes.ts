@@ -1,5 +1,6 @@
 import { createRolesController } from '@roles/useCases/createRole'
 import { showRoleController } from '@roles/useCases/createRole/listRoles/showRole'
+import { updateRoleController } from '@roles/useCases/createRole/listRoles/updateRole'
 import { listRoleController } from '@roles/useCases/listRoles'
 import { Router } from 'express'
 
@@ -16,6 +17,9 @@ rolesRoutes.get('/', (req, res) => {
 })
 rolesRoutes.get('/:id', (req, res) => {
   return showRoleController.handle(req, res)
+})
+rolesRoutes.put('/:id', (req, res) => {
+  return updateRoleController.handle(req, res)
 })
 
 export { rolesRoutes }
