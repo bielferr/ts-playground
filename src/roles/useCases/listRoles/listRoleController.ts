@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { ListRolesUseCase } from './createRole/listRoles/listRolesUseCase'
+import { ListRolesUseCase } from './listRolesUseCase'
 
 export class ListRolesController {
   constructor(private listRolesUseCase: ListRolesUseCase) {}
